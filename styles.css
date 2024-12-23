@@ -19,7 +19,8 @@ header {
 header .logo {
     display: block;
     margin: 0 auto 1em;
-    width: 150px;
+    width: 100px; /* Adjust this value to resize the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
 header h1 {
