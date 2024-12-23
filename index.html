@@ -8,14 +8,17 @@
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="MN Computer Recycling Logo" class="logo">
         <h1>MN Computer Recycling</h1>
-        <p>Recycle your tech responsibly and locally</p>
+        <p>Turning old tech into new opportunities for our community</p>
     </header>
+
     <nav>
         <a href="#services">Services</a>
         <a href="#educational">Why Recycle?</a>
         <a href="#contact">Contact</a>
     </nav>
+
     <main>
         <section id="services">
             <h2>What We Accept</h2>
@@ -26,15 +29,33 @@
                 <li>Refurbished tech for those in need</li>
             </ul>
         </section>
+
         <section id="educational">
             <h2>Why Recycle?</h2>
             <p><strong>Protect the Environment:</strong> Avoid harmful e-waste in landfills.</p>
             <p><strong>Data Security:</strong> We ensure secure wiping or destruction of sensitive data.</p>
             <p><strong>Support the Community:</strong> Recycled tech can be refurbished for those in need.</p>
         </section>
+
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Ready to recycle your old tech? Contact us today!</p>
             <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">What items do you want to recycle?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
