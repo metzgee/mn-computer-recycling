@@ -13,22 +13,30 @@ header {
     background-color: #007acc;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
+}
+
+header .logo {
+    display: block;
+    margin: 0 auto 1em;
+    width: 150px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 header p {
     margin: 0.5em 0 0;
+    font-size: 1.2em;
 }
 
 /* Navigation */
 nav {
     background-color: #005ea6;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.5em 0;
 }
 
 nav a {
