@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f4f4f9;
     text-align: center;
 }
 
@@ -14,29 +14,50 @@ header {
     background-color: #007acc;
     color: white;
     padding: 2em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: '';
+    background: url('header-background.png') no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
 }
 
 header .logo {
     display: block;
     margin: 0 auto 1em;
-    width: 100px; /* Adjusts logo size */
+    width: 120px; /* Adjusts logo size */
     height: auto; /* Maintains aspect ratio */
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    position: relative;
+    z-index: 1;
 }
 
 header p {
     margin: 0.5em 0 0;
     font-size: 1.2em;
+    position: relative;
+    z-index: 1;
 }
 
 /* Navigation */
 nav {
     background-color: #005ea6;
     padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -44,27 +65,35 @@ nav a {
     text-decoration: none;
     margin: 0 1em;
     font-size: 1em;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ffdd57;
 }
 
 /* Main Content */
 main {
     padding: 2em;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
 section {
     margin-bottom: 2em;
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     color: #007acc;
     margin-bottom: 1em;
     font-size: 1.8em;
+    border-bottom: 2px solid #007acc;
+    display: inline-block;
+    padding-bottom: 0.3em;
 }
 
 /* Form Styling */
@@ -72,7 +101,7 @@ form {
     max-width: 600px;
     margin: 0 auto;
     padding: 1.5em;
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -93,6 +122,13 @@ form textarea {
     border-radius: 4px;
     font-size: 1em;
     box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007acc;
+    outline: none;
 }
 
 form button {
@@ -106,6 +142,7 @@ form button {
     font-size: 1em;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
@@ -118,4 +155,38 @@ footer {
     color: white;
     padding: 1em 0;
     margin-top: 2em;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer::before {
+    content: '';
+    background: url('footer-background.png') no-repeat center center/cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+footer p,
+footer a {
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
 }
