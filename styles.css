@@ -16,6 +16,13 @@ header {
     padding: 1.5em 0;
 }
 
+header .logo {
+    display: block;
+    margin: 0 auto 1em;
+    width: 120px; /* Sets the logo size */
+    height: auto; /* Maintains the aspect ratio */
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -65,10 +72,10 @@ section h2 {
 /* Form Container */
 form {
     max-width: 600px;
-    margin: 0 auto;   /* Centers the form horizontally */
-    padding: 1em;     /* Adds padding inside the form */
+    margin: 0 auto; /* Centers the form */
+    padding: 1.5em; /* Adds padding inside the form */
     background-color: #f2f2f2; /* Light background for contrast */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
@@ -83,18 +90,19 @@ form label {
 /* Form Inputs and Textareas */
 form input,
 form textarea {
-    width: 100%; /* Full width relative to the form container */
+    width: 100%; /* Full width */
     padding: 0.8em;
-    margin-bottom: 1em;
+    margin-bottom: 1em; /* Space between inputs */
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
     font-size: 1em;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 /* Form Button */
 form button {
     display: inline-block;
+    width: 100%; /* Full-width button */
     padding: 0.8em 1.5em;
     background-color: #007acc;
     color: white;
